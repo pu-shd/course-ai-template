@@ -4,6 +4,32 @@ Use this template to give instructors and students a shared way to work with AI 
 It covers preparation, live teaching, study, practice, and review. The official syllabus and
 instructor directions govern when students may use AI.
 
+## Who uses which files
+
+- **Instructors and TAs** use this README to set up the course repository. If they release past
+  questions, they use the [past-assessment index](exams/README.md) to map them to course topics.
+- **Students** use the course README to find the syllabus, course materials, and example prompts.
+  They use the past-assessment index to find questions on topics they have covered.
+- **AI assistants** follow the root `AGENTS.md` and the guide for the material in use.
+
+## What the AI tool reads
+
+Codex loads `AGENTS.md` files from the repository root through its starting directory by default.
+For example, starting in `assignments/` loads the root guide and `assignments/AGENTS.md`.
+If you start at the root, name the file you want to use so the assistant can open the matching
+guide. [Codex documentation](https://learn.chatgpt.com/docs/agent-configuration/agents-md#how-codex-discovers-guidance)
+
+The assistant reads the syllabus, lecture notes, and problems as needed. Name the files you want
+it to use or attach them. If your tool requires you to supply instructions manually, attach or
+paste the root guide and the relevant directory guide along with the released material.
+
+| Instruction file | What it tells the assistant |
+| --- | --- |
+| [Course guide](AGENTS.md) | Sources of authority, learning workflow, and assessment boundaries |
+| [Lecture guide](lectures/AGENTS.md) | How to support class preparation, study, and live teaching |
+| [Assignment guide](assignments/AGENTS.md) | When and how to give hints, feedback, and solutions |
+| [Past-assessment guide](exams/AGENTS.md) | How to choose aligned questions and run timed practice or solution study |
+
 ## Set up a course repository
 
 1. Select **Use this template** on GitHub. For an existing course repository, copy the instruction
@@ -17,19 +43,6 @@ instructor directions govern when students may use AI.
    [past-assessment index](exams/README.md) if you release past questions.
 5. Try one student request and one instructor request using released material. Check that the
    assistant cites the right files and follows the relevant guide and course policy.
-
-The guides are Markdown and can be read on GitHub or in a text editor. With a tool that loads
-`AGENTS.md`, work in the course repository and name the material you want to use. With other
-tools, supply the root guide, the directory guide, and the relevant released material.
-
-## Choose a guide
-
-| Guide | Use it for |
-| --- | --- |
-| [Course guide](AGENTS.md) | Sources of authority, learning workflow, and assessment boundaries |
-| [Lecture guide](lectures/AGENTS.md) | Preparing for class, studying released material, or assisting a live class |
-| [Assignment guide](assignments/AGENTS.md) | Hints, feedback, and solution study when permitted |
-| [Past-assessment guide](exams/AGENTS.md) | Aligned review questions, timed practice, and released solutions |
 
 ## Example requests
 
