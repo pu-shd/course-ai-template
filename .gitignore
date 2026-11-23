@@ -1,0 +1,7 @@
+.DS_Store
+.env*
+!example.env
+node_modules/
+__pycache__/
+*.db
+build/
